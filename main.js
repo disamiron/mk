@@ -23,9 +23,9 @@ let player2 =
     }
 ;
 
-function createPlayer (player) {
+function createPlayer (playerClass, player) {
     const $player = document.createElement("div");
-    $player.classList.add("player");
+    $player.classList.add(playerClass);
 
     const $arenas = document.querySelector(".arenas");
     $arenas.appendChild($player);
@@ -54,5 +54,5 @@ function createPlayer (player) {
     $character.appendChild(img);
 }
 
-createPlayer(player1);
-createPlayer(player2);
+createPlayer("player1", player1);
+createPlayer("player2", player2);
