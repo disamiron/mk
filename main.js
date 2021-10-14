@@ -1,7 +1,7 @@
 let player1 = 
     {
         name : "Scorpion",
-        hp : 100,
+        hp : 50,
         img : "http://reactmarathon-api.herokuapp.com/assets/scorpion.gif",
         weapon : ["kunai","fireBall","getOverHere"],
         attack() {
@@ -38,11 +38,10 @@ function createPlayer (playerClass, player) {
     $character.classList.add("character");
     $player.appendChild($character);
 
-    const $live = document.createElement("div");
-    $live.classList.add("live");
-    $live.style.width = "100%";
-    $live.innerText = player.hp;
-    $progressbar.appendChild($live);
+    const $life = document.createElement("div");
+    $life.classList.add("life");
+    $life.style.width = player.hp+"%";
+    $progressbar.appendChild($life);
 
     const $name = document.createElement("div");
     $name.classList.add("name");
